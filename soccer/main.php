@@ -67,6 +67,7 @@
         <div class="leaguebtn">
             <div class="league-content">
                 <h3> 라리가 / LaLiga </h3>
+                <h2>깃허브테스트</h2>
                 <span>DB연동<small>Positions</small></span>
             </div>
         </div>
