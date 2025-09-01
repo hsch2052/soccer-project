@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/community.css">
     <title>Document</title>
 </head>
 
@@ -17,6 +18,7 @@
         <li><a href="index.php">홈</a></li>
         <li><a href="#">뉴스</a></li>
         <li><a href="#">이적시장</a></li>
+        <li><a href="community.php">커뮤니티</a></li>
       </ul>
       <div class="logo">⚽</div>
       <ul class="nav-right">
