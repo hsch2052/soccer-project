@@ -1,0 +1,309 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* 섹션 간 간격 */
+    padding: 20px;
+}
+
+
+
+.card-slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+
+.carousel {
+    position: relative;
+    perspective: 1200px;
+    /* 입체감 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel a {
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    transition: transform 0.5s, z-index 0.5s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 카드 위치 */
+.pos1 {
+    transform: translateX(-300px) scale(0.8);
+    z-index: 1;
+}
+
+.pos2 {
+    transform: translateX(-150px) scale(0.9);
+    z-index: 2;
+}
+
+.pos3 {
+    transform: translateX(0) scale(1);
+    z-index: 3;
+}
+
+.pos4 {
+    transform: translateX(150px) scale(0.9);
+    z-index: 2;
+}
+
+.pos5 {
+    transform: translateX(300px) scale(0.8);
+    z-index: 1;
+}
+
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+
+.emble {
+    display: flex;
+    /* 가로 배치 */
+    justify-content: center;
+    /* 가운데 정렬 */
+    gap: 20px;
+    /* 아이콘 간격 */
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.emble a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* 동그랗게 */
+    background: #e0e0e0;
+    /* 배경색 (회색) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.emble a img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    /* 이미지 비율 유지 */
+    display: block;
+}
+
+.emble a:hover {
+    /* 마우스 올리면 색 변경 */
+    transform: scale(1.1);
+    /* 살짝 커짐 */
+}
+
+
+
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+
+.lounge {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.card {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.6s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* 처음에는 밑으로 숨김 */
+.hidden {
+    opacity: 0;
+    transform: translateY(80px);
+}
+
+/* 화면에 들어오면 보여짐 */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease-out;
+}
+
+.card:hover {
+    flex: 3;
+}
+
+.card:hover img {
+    transform: scale(1.0, 1);
+    transition: transform 0.6s ease;
+}
+
+
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+
+.league {
+    display: flex;
+    gap: 20px;
+    /* 아이템 간 간격 */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.leaguebtn {
+    position: relative;
+    width: 300px;
+    height: 120px;
+    border-radius: 12px;
+    background: #f5f5f5;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.leaguebtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../img/프리미어리그_로고.png") center/cover no-repeat;
+    transform: scale(1.1);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+/* .leaguebtn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 40% 100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+} */
+
+.league-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    color: #111;
+    transition: color 0.3s ease;
+}
+
+.leaguebtn h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.leaguebtn span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.leaguebtn span small {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+.leaguebtn:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.leaguebtn:hover::after {
+    opacity: 1;
+}
+
+.leaguebtn:hover .card-content {
+    color: #fff;
+}
+
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+
+.bgimg {
+    position: relative;
+    display: flex;
+    width: 1130px;
+    height: 700px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.bgimg img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;               /* 처음엔 안 보임 */
+  transition: opacity 0.4s ease;
+}
+
+/* hover 시 나타남 */
+.bgimg:hover .text {
+  opacity: 1;
+}
